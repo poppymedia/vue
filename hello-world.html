@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Vue Hello World</title>
+        <style>
+            body {
+                margin: 0;
+            }
+            #message {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                font-size: 2em;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="message">
+            <message></message>
+        </div>
+
+        <script>
+        Vue.component('message', {
+            data: function () {
+              return {
+                count: 0
+              }
+            },
+            template: '<p>Hello World</p>'
+        });
+        new Vue({ el: '#message' });
+        </script>
+
+    </body>
+</html>
